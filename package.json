@@ -1,0 +1,7 @@
+{
+  "name": "sockets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Rohan Basu <basurohan@gmail.com>",
+  "license": "MIT"
+}
