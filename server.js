@@ -12,13 +12,15 @@ io.on('connection', function (socket) {
     console.log('User connected via socket.io');
 
     socket.emit('message', {
+        name: 'System',
         text: 'Welcome to the chat application!',
         timestamp: now.valueOf()
     });
 
     socket.on('message', function (message) {
         message.timestamp = now.valueOf();
-        console.log('Message received: ' + message.timestamp + ' ' + message.text);
+        console.log('Message received from: ' + message.name);
+        console.log(message.timestamp + ' ' + message.text);
         io.emit('message', message);
         // socket.broadcast.emit('message', message);
     });
