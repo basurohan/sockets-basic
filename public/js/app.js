@@ -19,10 +19,13 @@ socket.on('message', function (message) {
     // console.log('New message');
     // console.log(message.text);
     const timestampMoment = moment.utc(message.timestamp);
-    $message = jQuery(".messages");
+    let $messages = jQuery(".messages");
+    let $message = jQuery('<li class="list-group-item"></li>');
 
     $message.append('<p><strong>' + message.name + ' ' + timestampMoment.local().format('h:mma') +'</strong></p>')
     $message.append('<p>' + message.text + '</p>');
+
+    $messages.append($message);
 });
 
 // Handles submitting of new message
@@ -35,6 +38,6 @@ $form.on('submit', function (event) {
         text: $form.find('input[name=message]').val()
     });
     // either of the below will work
-    $form.find('input[name=message]').val(' ');
+    $form.find('input[name=message]').val('');
     // $form.trigger("reset");
 });

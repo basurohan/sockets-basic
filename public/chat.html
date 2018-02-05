@@ -3,22 +3,40 @@
     <head>
         <meta charset="Utf-8">
         <title>Socket.io Basic</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
-        <div>
-            <a href="./index.html">Change Settings</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 well">
+                    <div>
+                        <a href="./index.html">Change Settings</a>
+                    </div>
+            
+                    <h1 class="room-title"><!-- Chatroom name goes here  --></h1>
+            
+                    <ul class="messages list-group">
+                        <!-- Messages go in here -->
+                    </ul>
+            
+                    <form id="message-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">
+                                    <i class="glyphicon glyphicon-comment"></i>
+                                </span>
+                                <input type="text" class="form-control" name="message" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-
-        <h1 class="room-title"><!-- Chatroom name goes here  --></h1>
-
-        <div class="messages">
-            <!-- Messages go in here -->
-        </div>
-
-        <form id="message-form">
-            <input type="text" name="message" />
-            <input type="submit" />
-        </form>
+        
 
         <script src="/js/jquery-3.3.1.min.js"></script>
         <script src="/js/socket.io-2.0.4.js"></script>
