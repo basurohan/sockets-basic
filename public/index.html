@@ -3,20 +3,32 @@
     <head>
         <meta charset="Utf-8">
         <title>Socket.io Basic</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/styles.css">
     </head>
     <body>
-        <h1>Join Chat</h1>
-        <form id='joining-form' action='./chat.html'>
-            <p>
-                <label>Display Name: </label>
-                <input type="text" name="name" />
-            </p>
-            <p>
-                <label>Room Name: </label>
-                <input type="text" name="room" />
-            </p>
-            <button type="submit">Join Chat</button>
-        </form>
+        <div class="vertical-center">
+            <div class="container">
+                <div class="row">
+                        <div class="col-md-4 offset-md-4">
+                            <h1>Join Chat</h1>
+                            <form id='joining-form' action='./chat.html'>
+                                <div class="form-group">
+                                    <label for="displayName">Display Name: </label>
+                                    <input type="text" class="form-control" name="name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="roomName">Room Name: </label>
+                                    <input type="text" class="form-control" name="room" />
+                                </div>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary btn-block">Join Chat</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
     </body>
 </html>
 
